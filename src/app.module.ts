@@ -9,16 +9,4 @@ import { AppService } from './app.service';
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
-
-/*
-@Module({
-  imports: [ServeStaticModule.forRoot({
-    rootPath: join(__dirname,'..','public')
-  }),
-  ProductsModule, BrandsModule,
-],
-  controllers: [],
-  providers: [],
-})
-*/
+export class AppModule { }
