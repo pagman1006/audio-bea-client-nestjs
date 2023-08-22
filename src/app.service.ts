@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { ApiService } from './api/api.service';
 import { CreateProductDto } from './dto/create-product.dto';
+import { ResponsePaginationDto } from './dto/response-pagination.dto';
 
 @Injectable()
 export class AppService {
@@ -13,7 +14,8 @@ export class AppService {
 
   async getNewProducts(choose: String) {
     const url = `${this.dominio}/v1/audio-bea/products?newProduct=true&productType=${choose}`;
-    const { data } = await this.apiService.get<CreateProductDto[]>(url);
+    const { data } = await this.apiService.get<ResponsePaginationDto<CreateProductDto>>(url);
+    //console.log(data);
     return data;
   }
 

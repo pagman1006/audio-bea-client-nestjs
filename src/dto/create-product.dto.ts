@@ -1,5 +1,6 @@
 import { IsString } from "class-validator";
 import { CreateSubBrandDto } from "./create-sub-brand.dto";
+import { CreateImageDto } from "./create-image.dto";
 
 export class CreateProductDto {
 
@@ -11,6 +12,7 @@ export class CreateProductDto {
     readonly description: string;
     readonly stock: number;
     readonly subBrand: CreateSubBrandDto;
+    readonly images: CreateImageDto[];
     readonly enabled: boolean;
 
 }

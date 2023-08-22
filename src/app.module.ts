@@ -6,8 +6,18 @@ import { AppService } from './app.service';
 import { ApiModule } from './api/api.module';
 import { HttpService } from '@nestjs/axios';
 
+
+const discountFn = (price: number, discount: number) => {
+  return price - (price * discount / 100);
+}
+
 @Module({
-  imports: [ProductsModule, BrandsModule, ApiModule],
+  imports: [
+    ProductsModule, 
+    BrandsModule, 
+    ApiModule,
+
+  ],
   controllers: [AppController],
   providers: [AppService],
 })

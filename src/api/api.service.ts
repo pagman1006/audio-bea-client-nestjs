@@ -10,7 +10,7 @@ export class ApiService {
 
     async get<T>(url: string): Promise<AxiosResponse<T, any>> {
         try {
-            return (await firstValueFrom(this.http.get(url)))?.data;
+            return (await firstValueFrom(this.http.get(url)));
         } catch (error) {
             if (isAxiosError(error)) {
                 console.error(error.response?.data);
