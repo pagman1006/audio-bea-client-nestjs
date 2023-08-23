@@ -59,16 +59,16 @@
           <div class="section-nav">
             <ul class="section-tab-nav tab-nav">
               <li class="active">
-                <a href="#tab1" data-toggle="tab">Autoestereos</a>
+                <a href="#carstereo" data-toggle="tab">Autoestereos</a>
               </li>
               <li>
-                <a href="#tab1" data-toggle="tab">Subwoofers</a>
+                <a href="#subwoofer" data-toggle="tab">Subwoofers</a>
               </li>
               <li>
-                <a href="#tab1" data-toggle="tab">Alarmas</a>
+                <a href="#alarm" data-toggle="tab">Alarmas</a>
               </li>
               <li>
-                <a href="#tab1" data-toggle="tab">Accesorios</a>
+                <a href="#accesory" data-toggle="tab">Accesorios</a>
               </li>
             </ul>
           </div>
@@ -78,7 +78,7 @@
         <div class="row">
           <div class="products-tabs">
 
-            <div class="tab-pane active" id="tab1">
+            <div class="tab-pane active" id="carstereo">
               <div class="products-slick" data-nav="#slick-nav-1">
 
                 {{#each carStereoNews}}
@@ -95,15 +95,13 @@
                     </div>
                   </div>
 
-
                   <div class="product-body">
                     <p class="product-category">Autoestereos</p>
                     <h3 class="product-name">
                       <a href="#">{{this.productName}}</a>
                     </h3>
-                    {{#customHelper}}{{/customHelper}}
-                    <h4 class="product-price">${{this.price}}
-                      <del class="product-old-price">$990.00</del>
+                    <h4 class="product-price">${{discountFn price discount}}
+                      <del class="product-old-price">${{this.price}}</del>
                     </h4>
                     <div class="product-rating">
                       <i class="fa fa-star"></i>
@@ -142,6 +140,196 @@
               </div>
               <div id="slick-nav-1" class="products-slick-nav"></div>
             </div>
+
+            <div class="tab-pane" id="subwoofer">
+              <div class="products-slick" data-nav="#slick-nav-1">
+
+                {{#each carStereoNews}}
+                <div class="product">
+                  <div class="product-img">
+                    {{#each this.images}}
+                    {{#if this.selected}}
+                    <img src="{{this.imageName}}" alt="">
+                    {{/if}}
+                    {{/each}}
+                    <div class="product-label">
+                      <span class="sale">-{{this.discount}}%</span>
+                      <span class="new">Nuevo</span>
+                    </div>
+                  </div>
+
+                  <div class="product-body">
+                    <p class="product-category">Autoestereos</p>
+                    <h3 class="product-name">
+                      <a href="#">{{this.productName}}</a>
+                    </h3>
+                    <h4 class="product-price">${{discountFn price discount}}
+                      <del class="product-old-price">${{this.price}}</del>
+                    </h4>
+                    <div class="product-rating">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+
+                    <div class="product-btns">
+                      <button class="add-to-wishlist">
+                        <i class="fa fa-heart-o"></i>
+                        <span class="tooltipp">seguir</span>
+                      </button>
+                      <button class="add-to-compare">
+                        <i class="fa fa-exchange"></i>
+                        <span class="tooltipp">comparar</span>
+                      </button>
+                      <button class="quick-view">
+                        <i class="fa fa-eye"></i>
+                        <span class="tooltipp">ver</span>
+                      </button>
+                    </div>
+
+                    <div class="add-to-cart">
+                      <button class="add-to-cart-btn">
+                        <i class="fa fa-shopping-cart"></i>
+                        agregar
+                      </button>
+                    </div>
+
+                  </div>
+                </div>
+                {{/each}}
+
+              </div>
+              <div id="slick-nav-1" class="products-slick-nav"></div>
+            </div>
+
+            <div class="tab-pane" id="alarm">
+              <div class="products-slick" data-nav="#slick-nav-1">
+
+                {{#each carStereoNews}}
+                <div class="product">
+                  <div class="product-img">
+                    {{#each this.images}}
+                    {{#if this.selected}}
+                    <img src="{{this.imageName}}" alt="">
+                    {{/if}}
+                    {{/each}}
+                    <div class="product-label">
+                      <span class="sale">-{{this.discount}}%</span>
+                      <span class="new">Nuevo</span>
+                    </div>
+                  </div>
+
+                  <div class="product-body">
+                    <p class="product-category">Autoestereos</p>
+                    <h3 class="product-name">
+                      <a href="#">{{this.productName}}</a>
+                    </h3>
+                    <h4 class="product-price">${{discountFn price discount}}
+                      <del class="product-old-price">${{this.price}}</del>
+                    </h4>
+                    <div class="product-rating">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+
+                    <div class="product-btns">
+                      <button class="add-to-wishlist">
+                        <i class="fa fa-heart-o"></i>
+                        <span class="tooltipp">seguir</span>
+                      </button>
+                      <button class="add-to-compare">
+                        <i class="fa fa-exchange"></i>
+                        <span class="tooltipp">comparar</span>
+                      </button>
+                      <button class="quick-view">
+                        <i class="fa fa-eye"></i>
+                        <span class="tooltipp">ver</span>
+                      </button>
+                    </div>
+
+                    <div class="add-to-cart">
+                      <button class="add-to-cart-btn">
+                        <i class="fa fa-shopping-cart"></i>
+                        agregar
+                      </button>
+                    </div>
+
+                  </div>
+                </div>
+                {{/each}}
+
+              </div>
+              <div id="slick-nav-1" class="products-slick-nav"></div>
+            </div>
+
+            <div class="tab-pane" id="accesory">
+              <div class="products-slick" data-nav="#slick-nav-1">
+
+                {{#each carStereoNews}}
+                <div class="product">
+                  <div class="product-img">
+                    {{#each this.images}}
+                    {{#if this.selected}}
+                    <img src="{{this.imageName}}" alt="">
+                    {{/if}}
+                    {{/each}}
+                    <div class="product-label">
+                      <span class="sale">-{{this.discount}}%</span>
+                      <span class="new">Nuevo</span>
+                    </div>
+                  </div>
+
+                  <div class="product-body">
+                    <p class="product-category">Autoestereos</p>
+                    <h3 class="product-name">
+                      <a href="#">{{this.productName}}</a>
+                    </h3>
+                    <h4 class="product-price">${{discountFn price discount}}
+                      <del class="product-old-price">${{this.price}}</del>
+                    </h4>
+                    <div class="product-rating">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+
+                    <div class="product-btns">
+                      <button class="add-to-wishlist">
+                        <i class="fa fa-heart-o"></i>
+                        <span class="tooltipp">seguir</span>
+                      </button>
+                      <button class="add-to-compare">
+                        <i class="fa fa-exchange"></i>
+                        <span class="tooltipp">comparar</span>
+                      </button>
+                      <button class="quick-view">
+                        <i class="fa fa-eye"></i>
+                        <span class="tooltipp">ver</span>
+                      </button>
+                    </div>
+
+                    <div class="add-to-cart">
+                      <button class="add-to-cart-btn">
+                        <i class="fa fa-shopping-cart"></i>
+                        agregar
+                      </button>
+                    </div>
+
+                  </div>
+                </div>
+                {{/each}}
+
+              </div>
+              <div id="slick-nav-1" class="products-slick-nav"></div>
+            </div>
+
           </div>
         </div>
       </div>

@@ -13,16 +13,17 @@ export class AppController {
     const subwooferNews: CreateProductDto[] = (await this.appService.getNewProducts("SUBWOOFER"))?.data;
     const alarmNews: CreateProductDto[] = (await this.appService.getNewProducts("ALARM"))?.data;
     const accesoryNews: CreateProductDto[] = (await this.appService.getNewProducts("ACCESSORY"))?.data;
-    console.log(carStereoNews);
-    console.log(carStereoNews[0]);
-    console.log(carStereoNews[0].subBrand);
-    console.log(carStereoNews[0].images[0]);
+    // console.log(carStereoNews);
+    // console.log(carStereoNews[0]);
+    // console.log(carStereoNews[0].subBrand);
+    // console.log(carStereoNews[0].images[0]);
+
     return res.render('home', {
       carStereoNews,
       subwooferNews,
       alarmNews,
       accesoryNews,
-      message: "Home"
+      message: "Home",
     });
   }
 
